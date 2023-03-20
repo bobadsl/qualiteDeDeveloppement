@@ -1,0 +1,36 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '2.7.5'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	/* Pour l'application soit une application Web
+	   rapatrie SpringMVC, SpringContext, le serveur Tomcat */
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	
+	
+	/* Necessaire pour le développement de la partie persistante
+	   Permet d'utiliser SpringData qui est une implémentation 
+	   de JPA (Java Persistence API).SpringData implémente toutes 
+	   méthodes du CRUD (Create, Read, Update, Delete) quand on
+	   hérite de JpaRepository ou de CrudRepository 
+	 */
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	
+	/* Pour utiliser la base de données H2 */
+	implementation 'com.h2database:h2'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

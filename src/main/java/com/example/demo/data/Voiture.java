@@ -2,23 +2,24 @@ package com.example.demo.data;
 
 import javax.persistence.*;
 
+
 /*
- * indique que la classe Voiture sera une table de la base de 
+ * Indique que la classe Voiture sera une table de la base de
  * données
  */
 @Entity
 public class Voiture {
 
-    String marque;
-    int prix;
-    int id;
+    private String marque;
+    private  int prix;
+    private int id;
 
     public Voiture(){
     }
 
-    public Voiture(String marque, int prix) {
+    public Voiture(String marque, int prix) throws PrixNegatifException{
         this.marque = marque;
-        this.prix = prix;
+        this.setPrix(prix);
     }
 
     
@@ -50,7 +51,8 @@ public class Voiture {
         return prix;
     }
 
-    public void setPrix(int prix) {
+    public void setPrix(int prix) throws PrixNegatifException {
+        if (prix<0) throw new PrixNegatifException();
         this.prix = prix;
     }
 

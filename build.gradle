@@ -41,6 +41,7 @@ dependencies {
 	 * @AllARGSConstructor permet de génerer automatiquement le constructeur qui initialise tous les attribus d'instances
 	 * etc.
 	 */
+	implementation 'org.projectlombok:lombok'
 
 
 	/* Pour utiliser la base de données H2 */

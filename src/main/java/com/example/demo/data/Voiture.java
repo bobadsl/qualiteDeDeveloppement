@@ -1,5 +1,10 @@
 package com.example.demo.data;
 
+        import lombok.AllArgsConstructor;
+        import lombok.Builder;
+        import lombok.Getter;
+        import lombok.Setter;
+
         import javax.persistence.*;
 
 
@@ -7,6 +12,9 @@ package com.example.demo.data;
  * Indique que la classe Voiture sera une table de la base de
  * données
  */
+
+@Builder
+@AllArgsConstructor
 @Entity
 public class Voiture {
 
@@ -15,11 +23,6 @@ public class Voiture {
     private int id;
 
     public Voiture(){
-    }
-
-    public Voiture(String marque, int prix) {
-        this.marque = marque;
-        this.prix = prix;
     }
 
 

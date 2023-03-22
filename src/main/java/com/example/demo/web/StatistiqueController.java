@@ -13,9 +13,8 @@ import org.springframework.web.bind.annotation.*;
 public class StatistiqueController {
 
 	/*
-	  Injection de dependance de voitureRepository ;
+	  Injection de dependance de statistique ;
 	  Spring Boot crée une instance l'instance statistique
-	
 	 */
 	
     @Autowired

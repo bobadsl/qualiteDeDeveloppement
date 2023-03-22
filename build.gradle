@@ -25,10 +25,30 @@ dependencies {
 	   hérite de JpaRepository ou de CrudRepository 
 	 */
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-	
+
+	/**
+	 * Ajout BL
+	 * Permet la validation des données
+	 */
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+	/**
+	 * Ajout BL
+	 * Est un plugin qui pmermet de génerer du code à partir d'annotations
+	 * Par exemple
+	 * @Getter permet de généer automatiquement les accesseurs
+	 * @Setter permet de génerer automatiquement les mutateurs
+	 * @AllARGSConstructor permet de génerer automatiquement le constructeur qui initialise tous les attribus d'instances
+	 * etc.
+	 */
+
+
 	/* Pour utiliser la base de données H2 */
 	implementation 'com.h2database:h2'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+
+
 }
 
 tasks.named('test') {

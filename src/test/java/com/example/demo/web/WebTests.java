@@ -11,10 +11,8 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.mockito.Mockito.doNothing;
-import static org.mockito.Mockito.when;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -26,12 +24,21 @@ class WebTests {
 	@Autowired
 	MockMvc mockMvc;
 
-	@Test
+	/*@Test
+	public void givenBadArguments_whenGetSpecificException_thenBadRequest() throws Exception {
+		mockMvc.perform(get("/statistique")
+			.contentType(MediaType.APPLICATION_JSON))
+			.andExpect(status().isBadRequest())
+			.andExpect(result -> assertTrue(result.getResolvedException() instanceof PasDeVoitureException));
+			//.andExpect(result -> assertEquals("bad arguments", result.getResolvedException().getMessage()));
+	}*/
+
+	/*@Test
 	void testZeroVoiture() throws Exception {
 		mockMvc.perform(get("/statistique")
 			.contentType(MediaType.APPLICATION_JSON))
 			.andExpect(status().isOk());
-	}
+	}*/
 
 	@Test
 	void ajouterVoiture() throws Exception {

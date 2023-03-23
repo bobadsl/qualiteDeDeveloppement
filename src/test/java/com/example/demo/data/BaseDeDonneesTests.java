@@ -16,14 +16,9 @@ public class BaseDeDonneesTests {
 
     @Test
     void uneVoiture(){
-        try {
-            Voiture voiture = new Voiture("Ferrari", 5000);
-
-            when(voitureRepository.save(voiture)).thenReturn(voiture);
-            when(voitureRepository.findAll()).thenReturn(Collections.singletonList(voiture));
-        }
-
-        catch(PrixNegatifException e){}
+        Voiture voiture = new Voiture("Ferrari", 5000);
+        when(voitureRepository.save(voiture)).thenReturn(voiture);
+        when(voitureRepository.findAll()).thenReturn(Collections.singletonList(voiture));
     }
 
 }

@@ -13,8 +13,7 @@ package com.example.demo.data;
  * données
  */
 
-@Builder
-@AllArgsConstructor
+
 @Entity
 public class Voiture {
 
@@ -23,6 +22,11 @@ public class Voiture {
     private int id;
 
     public Voiture(){
+    }
+
+    public Voiture(String marque, int prix) {
+        this.marque = marque;
+        this.prix = prix;
     }
 
 

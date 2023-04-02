@@ -9,13 +9,20 @@ import javax.persistence.*;
 @Entity
 public class Voiture {
 
-    String marque;
-    int prix;
-    int id;
+    private String marque;
+    private int prix;
+    private int id;
 
     public Voiture(){
     }
 
+    /**
+     * Constructeur
+     *
+     * L'id est généré automatiquement
+     * @param marque
+     * @param prix
+     */
     public Voiture(String marque, int prix) {
         this.marque = marque;
         this.prix = prix;

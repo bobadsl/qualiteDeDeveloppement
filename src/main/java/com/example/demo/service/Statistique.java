@@ -5,9 +5,19 @@ import com.example.demo.data.VoitureRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
+/**
+ * Permet d'avoir des logs
+ */
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Optional;
 
 // la classe Statistique est une bean de service
 
@@ -39,4 +49,7 @@ public class Statistique {
     }
 
 
+    public Optional<Voiture> getVoitureById(int id){
+        return voitureRepository.findById(id);
+    }
 }

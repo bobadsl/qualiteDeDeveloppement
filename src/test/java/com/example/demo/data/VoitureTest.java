@@ -4,9 +4,17 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.util.Assert;
 
+
+/**
+ * Annotation pour indiquer que c'est un classe de test JUnit
+ */
 @SpringBootTest
 public class VoitureTest {
 
+
+    /**
+     * Annotation utilisé pour indiqué que la méthode effectue un tes
+     */
     @Test
     void creerVoiture(){
         Voiture voiture = new Voiture("Ferrari", 5000);

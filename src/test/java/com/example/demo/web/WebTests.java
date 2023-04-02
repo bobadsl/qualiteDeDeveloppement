@@ -21,10 +21,10 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 class WebTests {
 
 	@MockBean
-	Statistique statistique;
+	private Statistique statistique;
 
 	@Autowired
-	MockMvc mockMvc;
+	private MockMvc mockMvc;
 
 	@Test
 	void testZeroVoiture() throws Exception {
